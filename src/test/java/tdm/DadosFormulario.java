@@ -22,4 +22,17 @@ public class DadosFormulario {
 	static final String occupation = "Farmer";
 	static final String hobbies = "Skydiving";
 	static final String website = "https://josemaria.com";
+	
+	static final String startDate = "10/15/2022"; // Criar data
+	static final String insuranceSum = "3.000.000,00";
+	static final String meritRating = "Malus 10";
+	static final String damageInsurance = "Full Coverage";
+	static final String optionalEuro = "Euro Protection";
+	static final String optionalLegal = "Legal Defense Insurance";
+	static final String cortesyYes = "Yes";
+	static final String courtesyNor = "No";
+	static final String silver = "Silver";
+	static final String gold = "Gold";
+	static final String platinum = "Platinum";
+	static final String ultimate = "Ultimate";
 }
