@@ -31,8 +31,16 @@ public class DadosFormulario {
 	static final String optionalLegal = "Legal Defense Insurance";
 	static final String cortesyYes = "Yes";
 	static final String courtesyNor = "No";
+	
 	static final String silver = "Silver";
 	static final String gold = "Gold";
 	static final String platinum = "Platinum";
 	static final String ultimate = "Ultimate";
+	
+	static final String email = "josemaria@gmail.com";
+	static final String phone = "43243240011";
+	static final String userName = "josemaria";
+	static final String password = "Bologne1";
+	static final String confirmPassword = "Bologne1";
+	static final String comments = "Make it cheap!";
 }
