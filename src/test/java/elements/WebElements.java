@@ -3,6 +3,13 @@ package elements;
 import org.openqa.selenium.By;
 
 public class WebElements {
+	// ELEMENTOS NAVEGACAO
+	private By automobile 				= By.id("nav_automobile");
+	private By truck					= By.id("nav_truck");
+	private By motorcycle				= By.id("nav_motorcycle");
+	private By camper					= By.id("nav_camper");
+	
+	
 	// ELEMENTOS PAGE VEHICLE DATA
 	private By make 					= By.id("make");
 	private By model 					= By.id("model"); // Motorcycle
@@ -73,6 +80,22 @@ public class WebElements {
 	private By msgSendingEmail 			= By.xpath("//h2[contains(.,\"success\")]");
 	private By okButton 				= By.className("confirm");
 	
+	// ELEMENTOS NAVEGACAO
+	public By getAutomobile() {
+		return automobile;
+	}
+	
+	public By getTruck() {
+		return truck;
+	}
+	
+	public By getMotorcycle() {
+		return motorcycle;
+	}
+	
+	public By getCamper() {
+		return camper;
+	}
 	
 	// VEHICLE DATA GETTERS
 	public By getMake() {
