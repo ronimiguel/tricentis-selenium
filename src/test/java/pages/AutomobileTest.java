@@ -1,6 +1,8 @@
 package pages;
 
 import static core.DriverFactory.killDriver;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 import static tdm.DadosFormulario.*;
 
 import org.junit.After;
@@ -36,7 +38,16 @@ public class AutomobileTest extends DSL {
 		setListPrice(listPrice);
 		setLicenseNumber(licenseNumber);
 		setAnnualMileage(annualMilleage);
-	
+
+		assertTrue(obterItemSelecionado(getMake()));
+		assertEquals(enginePerformance, obterTextoEscrito(getEnginePerformance()));
+		assertEquals(dateOfManufacture, obterTextoEscrito(getDateOfManufacture()));
+		assertTrue(obterItemSelecionado(getNumberOfSeats()));
+		assertTrue(obterItemSelecionado(getFuel()));
+		assertEquals(fuel, obterTextoEscrito(getFuel()));
+		assertEquals(listPrice, obterTextoEscrito(getListPrice()));
+		assertEquals(licenseNumber, obterTextoEscrito(getLicensePlateNumber()));
+		assertEquals(annualMilleage, obterTextoEscrito(getAnnualMileage()));
 		
 		setNextEnterInsurantData();
 		
