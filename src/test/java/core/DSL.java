@@ -9,7 +9,9 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-public class DSL {
+import elements.WebElements;
+
+public class DSL extends WebElements{
 	/**
 	 * Abre o Browser no endereco do site.
 	 * @param url
@@ -70,8 +72,47 @@ public class DSL {
 		executor.executeScript("arguments[0].click();", box);
 	}
 	
+	public void setAutomobile() {
+		clicar(getAutomobile());
+	}
 	
+	// PARA PREENCHIMENTO DO FORMULARIO
+	// Vehicle Data
+	public void setMake(String make) {
+		selecionar(getMake(), make);
+	}
 
+	public void setEnginePerformance(String enginePerformance) {
+		escrever(getEnginePerformance(), enginePerformance);
+	}
+
+	public void setDateOfManufacture(String dateOfManufacture) {
+		escrever(getDateOfManufacture(), dateOfManufacture);
+	}
+
+	public void setNumberOfSeats(String numberOfSeats) {
+		selecionar(getNumberOfSeats(), numberOfSeats);
+	}
+
+	public void setFuel(String Fuel) {
+		selecionar(getFuel(), Fuel);
+	}
+
+	public void setListPrice(String listPrice) {
+		escrever(getListPrice(), listPrice);
+	}
+
+	public void setLicenseNumber(String licenseNumber) {
+		escrever(getLicensePlateNumber(), licenseNumber);
+	}
+
+	public void setAnnualMileage(String AnnualMileage) {
+		escrever(getAnnualMileage(), AnnualMileage);
+	}
+
+	public void setNextEnterInsurantData() {
+		clicar(getNextenterinsurantdata());
+	}
 
 
 }
