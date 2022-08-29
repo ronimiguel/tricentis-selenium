@@ -6,7 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import core.DSL;
-;
+
 
 public class AutomobileTest extends DSL {
 
@@ -61,6 +61,12 @@ public class AutomobileTest extends DSL {
 		setOptionalProdMotor(optionalLegal);
 		setCortesyCar(cortesyYes);
 		setNextSelectPriceOption();
+
+		// Preenchimento Select Price
+		setSelectPrice(platinum);
+		setNextSendQuote();
+
+		// Preenchimento Send Quote
 	}
 
 }

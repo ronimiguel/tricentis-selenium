@@ -15,7 +15,7 @@ public class DSL extends WebElements{
 	/**
 	 * Abre o Browser no endereco do site.
 	 * @param url
-	 * Receber endereco do site, exemplo: https://www.site.com/ 
+	 * Recebe endereco do site, exemplo: https://www.site.com/ 
 	 * @author Roni
 	 */
 	public void browser(String Url) {
@@ -221,5 +221,59 @@ public class DSL extends WebElements{
 		clicar(getNextSelectPriceOption());
 	}
 
+
+	public void setSelectPrice(String option) {
+		switch (option.toLowerCase()) {
+			case "silver":
+				clicarComJS(getSelectSilver());
+				break;
+			case "gold":
+				clicarComJS(getSelectGold());
+				break;
+			case "platinum":
+				clicarComJS(getSelectPlatinum());
+				break;
+			case "ultimate":
+				clicarComJS(getSelectUltimate());;
+			default:
+				clicarComJS(getSelectSilver());
+				break;
+		}
+	}
+
+	public void setNextSendQuote() {
+		clicar(getNextSendQuote());
+	}
+
+	public void setEmail(String email) {
+		escrever(getEmail(), email);
+	}
+
+	public void setPhone(String phone) {
+		escrever(getPhone(), phone);
+	}
+
+	public void setUserName(String username) {
+		escrever(getUsername(), username);
+	}
+
+	public void setPassword(String password) {
+		escrever(getPassword(), password);
+	}
+
+	public void setConfirmPassword(String password) {
+		escrever(getConfirmPassword(), password);
+	}
+	public void setComments(String comments) {
+		escrever(getComments(), comments);
+	}
+
+	public void setSendEmail() {
+		clicar(getSendEmail());
+	}
+
+	public void setGetOkButton() {
+		clicarComJS(getOkButton());
+	}
 
 }
