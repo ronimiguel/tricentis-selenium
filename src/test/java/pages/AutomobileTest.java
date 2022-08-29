@@ -1,7 +1,9 @@
 package pages;
 
+import static core.DriverFactory.killDriver;
 import static tdm.DadosFormulario.*;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -16,14 +18,14 @@ public class AutomobileTest extends DSL {
 	public void setUp() {
 		browser(url);
 	}
-//
-//	@After
-//	public void tearDown() {
-//		killDriver();
-//	}
+
+	@After
+	public void tearDown() {
+		killDriver();
+	}
 
 	@Test
-	public void autombileDevePreencherEnviarFormulario() {
+	public void automobileDevePreencherEnviarFormulario() {
 		// Preenchimento Vehicle Data
 		setAutomobile();
 		setMake(make);
