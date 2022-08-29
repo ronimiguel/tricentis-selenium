@@ -86,6 +86,14 @@ public class AutomobileTest extends DSL {
 		setCortesyCar(cortesyYes);
 		setNextSelectPriceOption();
 
+		assertEquals(startDate, obterTextoEscrito(getStartDate()));
+		assertTrue(obterItemSelecionado(getInsuranceSum()));
+		assertTrue(obterItemSelecionado(getMeritRating()));
+		assertTrue(obterItemSelecionado(getDamageInsurance()));
+		assertTrue(obterInnerText(getOptProdMotorEuroTXT()).contains(optionalEuro));
+		assertTrue(obterInnerText(getOptProdMotorLegalTXT()).contains(optionalLegal));
+		assertTrue(obterItemSelecionado(getCortesyCar()));
+
 		// Preenchimento Select Price
 		setSelectPrice(platinum);
 		setNextSendQuote();
