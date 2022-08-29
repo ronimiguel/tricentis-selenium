@@ -115,6 +115,16 @@ public class AutomobileTest extends DSL {
 		assertEquals(password, obterTextoEscrito(getPassword()));
 		assertEquals(confirmPassword, obterTextoEscrito(getConfirmPassword()));
 		assertEquals(comments, obterTextoEscrito(getComments()));
+
+	// Validar envio do formulario com sucesso e tirar um screenshot
+		assertEquals("Sending e-mail success!", obterTextoHtml(getMsgSendingEmail()));
+
+		setGetOkButton();
+
+
+
 	}
+
+
 
 }
