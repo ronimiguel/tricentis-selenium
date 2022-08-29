@@ -98,6 +98,8 @@ public class AutomobileTest extends DSL {
 		setSelectPrice(platinum);
 		setNextSendQuote();
 
+		assertEquals(platinum, obterValue(getSelectPlatinum()));
+
 		// Preenchimento Send Quote
 		setEmail(email);
 		setPhone(phone);
