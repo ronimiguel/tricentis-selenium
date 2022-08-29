@@ -10,12 +10,13 @@ import org.junit.Before;
 import org.junit.Test;
 
 import core.DSL;
+import utils.TakeScreenShot;
 
 
 public class AutomobileTest extends DSL {
 
 	String url = "http://sampleapp.tricentis.com/101/app.php";
-
+	TakeScreenShot take = new TakeScreenShot();
 	@Before
 	public void setUp() {
 		browser(url);
@@ -118,6 +119,7 @@ public class AutomobileTest extends DSL {
 
 	// Validar envio do formulario com sucesso e tirar um screenshot
 		assertEquals("Sending e-mail success!", obterTextoHtml(getMsgSendingEmail()));
+		take.Screenshot("Automobile-");
 
 		setGetOkButton();
 
