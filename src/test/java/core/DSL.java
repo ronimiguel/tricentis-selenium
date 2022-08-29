@@ -71,6 +71,36 @@ public class DSL extends WebElements{
 		JavascriptExecutor executor = (JavascriptExecutor) getDriver();
 		executor.executeScript("arguments[0].click();", box);
 	}
+
+
+	// Metodos para Facilitar Assertivas
+	public String obterTextoEscrito(By elemento) {
+		return	getDriver().findElement(elemento).getAttribute("value");
+
+	}
+
+	public String obterTextoHtml(By elemento) {
+		return	getDriver().findElement(elemento).getText();
+	}
+
+	public Boolean obterItemSelecionado(By elemento) {
+		WebElement box = getDriver().findElement(elemento);
+		Select opcao = new Select(box);
+		return opcao.getFirstSelectedOption().isSelected();
+	}
+
+	public String obterInnerText(By elemento) {
+		WebElement text = getDriver().findElement(elemento);
+		return text.getAttribute("innerText");
+	}
+
+	public String obterValue(By elemento) {
+		WebElement text = getDriver().findElement(elemento);
+		return text.getAttribute("value");
+	}
+
+
+
 	
 	public void setAutomobile() {
 		clicar(getAutomobile());
