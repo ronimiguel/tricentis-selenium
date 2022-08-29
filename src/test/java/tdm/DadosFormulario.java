@@ -1,9 +1,12 @@
 package tdm;
 
+import utils.Date;
+
 public class DadosFormulario {
+	static Date data = new Date();
 	public static final String make = "Ford";
 	public static final String enginePerformance = "2000";
-	public static final String dateOfManufacture = "08/01/2022"; //criar data
+	public static final String dateOfManufacture = data.fullDateWithDiffOfDays(-10); // data passada
 	public static final String numberOfSeats = "5";
 	public static final String fuel = "Gas";
 	public static final String listPrice = "39000";
@@ -12,7 +15,7 @@ public class DadosFormulario {
 	
 	public static final String firstName = "Jose";
 	public static final String lastName = "Maria";
-	public static final String birthDate = "08/01/1990";
+	public static final String birthDate = data.birthDateWithDiffOfYears(-18); // pessoa com 18 anos
 	public static final String male = "Male";
 	public static final String female = "Female";
 	public static final String streetAddress = "201 1st Avenue";
@@ -23,7 +26,7 @@ public class DadosFormulario {
 	public static final String hobbies = "Skydiving";
 	public static final String website = "https://josemaria.com";
 	
-	public static final String startDate = "10/15/2022"; // Criar data
+	public static final String startDate = data.fullDateWithDiffOfDays(32); // data 32 dias no futuro
 	public static final String insuranceSum = "3.000.000,00";
 	public static final String meritRating = "Malus 10";
 	public static final String damageInsurance = "Full Coverage";
