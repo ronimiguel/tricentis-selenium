@@ -184,6 +184,42 @@ public class DSL extends WebElements{
 	public void setNextProductData() {
 		clicar(getNextProductData());
 	}
+	
+	// Para preenchimento do formulario
+	// Product Data
+	
+
+	public void setStartDate(String startDate) {
+		escrever(getStartDate(), startDate);
+	}
+
+	public void setInsuranceSum(String insuranceSum) {
+		escrever(getInsuranceSum() ,insuranceSum);
+	}
+
+	public void setMeritRating(String meritRating) {
+		escrever(getMeritRating(), meritRating);;
+	}
+
+	public void setDamageInsurance(String damageInsurance) {
+		escrever(getDamageInsurance(), damageInsurance);
+	}
+
+	public void setOptionalProdMotor(String optionalProdMotor) {
+		if(optionalProdMotor.startsWith("Euro")) {
+			clicarComJS(getOptionalProdMotorEuro());
+		}else {
+			clicarComJS(getOptionalProdMotorLegal());
+		}
+	}
+
+	public void setCortesyCar(String cortesyCar) {
+		selecionar(getCortesyCar(), cortesyCar);
+	}
+
+	public void setNextSelectPriceOption() {
+		clicar(getNextSelectPriceOption());
+	}
 
 
 }

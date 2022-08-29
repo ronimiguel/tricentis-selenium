@@ -1,12 +1,14 @@
 package pages;
 
 import static tdm.DadosFormulario.*;
+
 import org.junit.Before;
 import org.junit.Test;
 
 import core.DSL;
+;
 
-public class Automobile extends DSL {
+public class AutomobileTest extends DSL {
 
 	String url = "http://sampleapp.tricentis.com/101/app.php";
 
@@ -14,14 +16,14 @@ public class Automobile extends DSL {
 	public void setUp() {
 		browser(url);
 	}
-
+//
 //	@After
 //	public void tearDown() {
 //		killDriver();
 //	}
 
 	@Test
-	public void automobileDevePreencherEnviarFormulario() {
+	public void autombileDevePreencherEnviarFormulario() {
 		// Preenchimento Vehicle Data
 		setAutomobile();
 		setMake(make);
@@ -32,6 +34,7 @@ public class Automobile extends DSL {
 		setListPrice(listPrice);
 		setLicenseNumber(licenseNumber);
 		setAnnualMileage(annualMilleage);
+	
 		
 		setNextEnterInsurantData();
 		
@@ -49,7 +52,15 @@ public class Automobile extends DSL {
 		setWebsite(website);
 		setNextProductData();
 		
-		
+		// Preenchimento Data Product
+		setStartDate(startDate);
+		setInsuranceSum(insuranceSum);
+		setMeritRating(meritRating);
+		setDamageInsurance(damageInsurance);
+		setOptionalProdMotor(optionalEuro);
+		setOptionalProdMotor(optionalLegal);
+		setCortesyCar(cortesyYes);
+		setNextSelectPriceOption();
 	}
 
 }

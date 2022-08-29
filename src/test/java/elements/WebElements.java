@@ -35,11 +35,9 @@ public class WebElements {
 	private	By genderMale 				= By.id("gendermale");
 	private	By streetaddress 			= By.id("streetaddress");
 	private By country 					= By.id("country");
-	private By selectCountry 			= By.xpath("option[234]");
 	private By zipcode 					= By.id("zipcode");
 	private By city 					= By.id("city");
 	private By occupation 				= By.id("occupation");
-	private By selectOccupation 		= By.xpath("//option[. = 'Employee']");
 	private By hobbiesSpeeding 			= By.id("speeding");
 	private By hobbiesBungeeJumping		= By.id("bungeejumping");
 	private By hobbiesCliffDiving		= By.id("cliffdiving");
@@ -157,6 +155,7 @@ public class WebElements {
 	public By getNextenterinsurantdata() {
 		return nextenterinsurantdata;
 	}
+	
 	// INSURANT DATA GETTERS
 	public By getFirstName() {
 		return firstName;
@@ -186,10 +185,6 @@ public class WebElements {
 		return country;
 	}
 
-	public By getSelectCountry() {
-		return selectCountry;
-	}
-
 	public By getZipcode() {
 		return zipcode;
 	}
@@ -200,10 +195,6 @@ public class WebElements {
 
 	public By getOccupation() {
 		return occupation;
-	}
-
-	public By getSelectOccupation() {
-		return selectOccupation;
 	}
 
 	public By getHobbiesSpeeding() {
