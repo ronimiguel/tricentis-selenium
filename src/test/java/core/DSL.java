@@ -113,6 +113,77 @@ public class DSL extends WebElements{
 	public void setNextEnterInsurantData() {
 		clicar(getNextenterinsurantdata());
 	}
+	
+	// Para preenchimento do formulario
+	// Insurant Data
+	
+	public void setFirstName(String firstName) {
+		escrever(getFirstName(), firstName);
+	}
+
+	public void setLastName(String lastName) {
+		escrever(getLastName(), lastName);
+	}
+
+	public void setBirthDate(String birthDate) {
+		escrever(getBirthDate(), birthDate);
+	}
+
+	public void setGender(String gender) {
+		if (gender.equalsIgnoreCase("Male")) {
+			clicarComJS(getGenderMale());
+		} else {
+			clicarComJS(getGenderFemale());
+		}
+	}
+
+	public void setStreetAdress(String adress) {
+		escrever(getStreetaddress(), adress);
+	}
+
+	public void setCountry(String country) {
+		selecionar(getCountry(), country);
+	}
+
+	public void setZipCode(String zipCode) {
+		escrever(getZipcode(), zipCode);
+	}
+
+	public void setCity(String city) {
+		escrever(getCity(), city);
+	}
+
+	public void setOccupation(String occupaction) {
+		selecionar(getOccupation(), occupaction);
+	}
+
+	public void setHobbies(String hobbies) {
+		switch (hobbies.toLowerCase()) {
+		case "speeding":
+			clicarComJS(getHobbiesSpeeding());
+			break;
+		case "bungee jumping":
+			clicarComJS(getHobbiesBungeeJumping());
+			break;
+		case "cliff diving":
+			clicarComJS(getHobbiesCliffDiving());
+			break;
+		case "skydiving":
+			clicarComJS(getHobbiesSkydiving());
+			break;
+		default:
+			clicarComJS(getHobbiesOther());
+			break;
+		}		
+	}
+	
+	public void setWebsite(String website){
+		escrever(getWebsite(), website);
+	}
+	
+	public void setNextProductData() {
+		clicar(getNextProductData());
+	}
 
 
 }

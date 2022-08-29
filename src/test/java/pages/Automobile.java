@@ -1,17 +1,13 @@
 package pages;
 
-import static core.DriverFactory.killDriver;
-
-import org.junit.After;
+import static tdm.DadosFormulario.*;
 import org.junit.Before;
 import org.junit.Test;
 
 import core.DSL;
-import static tdm.DadosFormulario.*;
 
 public class Automobile extends DSL {
 
-//	DSL dsl = new DSL();
 	String url = "http://sampleapp.tricentis.com/101/app.php";
 
 	@Before
@@ -26,6 +22,7 @@ public class Automobile extends DSL {
 
 	@Test
 	public void automobileDevePreencherEnviarFormulario() {
+		// Preenchimento Vehicle Data
 		setAutomobile();
 		setMake(make);
 		setEnginePerformance(enginePerformance);
@@ -35,6 +32,22 @@ public class Automobile extends DSL {
 		setListPrice(listPrice);
 		setLicenseNumber(licenseNumber);
 		setAnnualMileage(annualMilleage);
+		
+		setNextEnterInsurantData();
+		
+		// Preenchimento Insurant Data
+		setFirstName(firstName);
+		setLastName(lastName);
+		setBirthDate(birthDate);
+		setGender(male);
+		setStreetAdress(streetAddress);
+		setCountry(country);
+		setZipCode(zipcode);
+		setCity(city);
+		setOccupation(occupation);
+		setHobbies(hobbies);
+		setWebsite(website);
+		setNextProductData();
 		
 		
 	}
