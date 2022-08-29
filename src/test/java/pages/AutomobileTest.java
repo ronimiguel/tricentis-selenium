@@ -64,6 +64,17 @@ public class AutomobileTest extends DSL {
 		setHobbies(hobbies);
 		setWebsite(website);
 		setNextProductData();
+
+		assertEquals(firstName, obterTextoEscrito(getFirstName()));
+		assertEquals(lastName, obterTextoEscrito(getLastName()));
+		assertEquals(birthDate, obterTextoEscrito(getBirthDate()));
+		assertEquals(male, obterTextoEscrito(getGenderMale()));
+		assertEquals(streetAddress, obterTextoEscrito(getStreetaddress()));
+		assertEquals(city, obterTextoEscrito(getCity()));
+		assertEquals(zipcode, obterTextoEscrito(getZipcode()));
+		assertTrue(obterItemSelecionado(getOccupation()));
+		assertEquals(hobbies, obterTextoEscrito(getHobbiesSkydiving()));
+		assertEquals(website, obterTextoEscrito(getWebsite()));
 		
 		// Preenchimento Data Product
 		setStartDate(startDate);
