@@ -109,6 +109,12 @@ public class AutomobileTest extends DSL {
 		setComments(comments);
 		setSendEmail();
 
+		assertEquals(email, obterTextoEscrito(getEmail()));
+		assertEquals(phone, obterTextoEscrito(getPhone()));
+		assertEquals(userName, obterTextoEscrito(getUsername()));
+		assertEquals(password, obterTextoEscrito(getPassword()));
+		assertEquals(confirmPassword, obterTextoEscrito(getConfirmPassword()));
+		assertEquals(comments, obterTextoEscrito(getComments()));
 	}
 
 }
