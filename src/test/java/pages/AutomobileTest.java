@@ -67,6 +67,14 @@ public class AutomobileTest extends DSL {
 		setNextSendQuote();
 
 		// Preenchimento Send Quote
+		setEmail(email);
+		setPhone(phone);
+		setUserName(userName);
+		setPassword(password);
+		setConfirmPassword(confirmPassword);
+		setComments(comments);
+		setSendEmail();
+
 	}
 
 }
