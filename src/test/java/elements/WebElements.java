@@ -17,7 +17,7 @@ public class WebElements {
 	private By enginePerformance 		= By.id("engineperformance");
 	private By dateOfManufacture 		= By.id("dateofmanufacture");
 	private By numberOfSeats 			= By.id("numberofseats");
-	private By numberOfSeatsCycle 		= By.id("numberofseatsmotorcycle");
+	private By numberOfSeatsMotorcycle = By.id("numberofseatsmotorcycle");
 	private By rightHandDriveYes 		= By.id("righthanddriveyes");
 	private By rightHandDriveNo 		= By.id("righthanddriveno");
 	private By fuel 					= By.id("fuel");
@@ -121,8 +121,8 @@ public class WebElements {
 		return numberOfSeats;
 	}
 
-	public By getNumberOfSeatsCycle() {
-		return numberOfSeatsCycle;
+	public By getNumberOfSeatsMotorcycle() {
+		return numberOfSeatsMotorcycle;
 	}
 
 	public By getRightHandDriveYes() {

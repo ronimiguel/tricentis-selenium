@@ -5,9 +5,12 @@ import utils.Date;
 public class DadosFormulario {
 	static Date data = new Date();
 	public static final String make = "Ford";
+	public static final String model = "Moped";
 	public static final String enginePerformance = "2000";
+	public static final String cilinderCapacity = "1000";
 	public static final String dateOfManufacture = data.fullDateWithDiffOfDays(-10); // data passada
 	public static final String numberOfSeats = "5";
+	public static final String numberOfSeatsMotorcycle = "2";
 
 	public static final String righHandDrive = "Yes";
 	public static final String fuel = "Gas";

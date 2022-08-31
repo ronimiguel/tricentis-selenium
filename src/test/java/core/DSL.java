@@ -127,6 +127,14 @@ public class DSL extends WebElements{
 		selecionar(getMake(), make);
 	}
 
+	public void setModel(String model) {
+		selecionar(getModel(), model);
+	}
+
+	public void setCilinderCapacity(String cilinderCapacity) {
+		escrever(getCilinderCapacity(), cilinderCapacity);
+	}
+
 	public void setEnginePerformance(String enginePerformance) {
 		escrever(getEnginePerformance(), enginePerformance);
 	}
@@ -138,6 +146,11 @@ public class DSL extends WebElements{
 	public void setNumberOfSeats(String numberOfSeats) {
 		selecionar(getNumberOfSeats(), numberOfSeats);
 	}
+
+	public void setNumberOfSeatsMotorcycle(String numberOfSeats) {
+		selecionar(getNumberOfSeatsMotorcycle(), numberOfSeats);
+	}
+
 
 	public void setRightHandDrive(String isRightHandDriver){
 		if (isRightHandDriver.equalsIgnoreCase("yes")){
