@@ -9,6 +9,10 @@ public class DadosFormulario {
 	public static final String dateOfManufacture = data.fullDateWithDiffOfDays(-10); // data passada
 	public static final String numberOfSeats = "5";
 	public static final String fuel = "Gas";
+
+	public static final String payload = "1000";
+
+	public static final String totalWeight = "10000";
 	public static final String listPrice = "39000";
 	public static final String licenseNumber = "hith3r3";
 	public static final String annualMilleage = "11000";

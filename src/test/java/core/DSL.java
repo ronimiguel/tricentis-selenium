@@ -105,6 +105,9 @@ public class DSL extends WebElements{
 	public void setAutomobile() {
 		clicar(getAutomobile());
 	}
+	public void setTruck(){
+		clicar(getTruck());
+	}
 	
 	// PARA PREENCHIMENTO DO FORMULARIO
 	// Vehicle Data
@@ -128,6 +131,13 @@ public class DSL extends WebElements{
 		selecionar(getFuel(), Fuel);
 	}
 
+	public void setPayload(String payload){
+		escrever(getPayload(),payload);
+	}
+
+	public void setTotalWeight(String totalWeight){
+		escrever(getTotalWeight(),totalWeight);
+	}
 	public void setListPrice(String listPrice) {
 		escrever(getListPrice(), listPrice);
 	}
