@@ -76,8 +76,13 @@ public class DSL extends WebElements{
 	// Metodos para Facilitar Assertivas
 	public String obterTextoEscrito(By elemento) {
 		return	getDriver().findElement(elemento).getAttribute("value");
-
 	}
+
+//	public Boolean obterIsRightHandDriver(){
+//		String answer = "yes";
+//		if (obterTextoEscrito(setRightHandDrive(answer).
+//		}
+//	}
 
 	public String obterTextoHtml(By elemento) {
 		return	getDriver().findElement(elemento).getText();
@@ -108,6 +113,13 @@ public class DSL extends WebElements{
 	public void setTruck(){
 		clicar(getTruck());
 	}
+	public void setCamper(){
+		clicar(getCamper());
+	}
+
+	public void setMotorcycle(){
+		clicar(getMotorcycle());
+	}
 	
 	// PARA PREENCHIMENTO DO FORMULARIO
 	// Vehicle Data
@@ -127,6 +139,13 @@ public class DSL extends WebElements{
 		selecionar(getNumberOfSeats(), numberOfSeats);
 	}
 
+	public void setRightHandDrive(String isRightHandDriver){
+		if (isRightHandDriver.equalsIgnoreCase("yes")){
+			clicarComJS(getRightHandDriveYes());
+		}else{
+			clicarComJS(getRightHandDriveNo());
+		}
+	}
 	public void setFuel(String Fuel) {
 		selecionar(getFuel(), Fuel);
 	}

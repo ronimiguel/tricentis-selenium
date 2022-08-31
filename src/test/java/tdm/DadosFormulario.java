@@ -8,6 +8,8 @@ public class DadosFormulario {
 	public static final String enginePerformance = "2000";
 	public static final String dateOfManufacture = data.fullDateWithDiffOfDays(-10); // data passada
 	public static final String numberOfSeats = "5";
+
+	public static final String righHandDrive = "Yes";
 	public static final String fuel = "Gas";
 
 	public static final String payload = "1000";
