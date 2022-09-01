@@ -10,11 +10,12 @@ import java.io.IOException;
 import static core.DriverFactory.getDriver;
 
 public class TakeScreenShot {
+    Date data = new Date();
     public void Screenshot(String name) {
 
         TakesScreenshot screenShot = ((TakesScreenshot) getDriver());
         File source = screenShot.getScreenshotAs(OutputType.FILE);
-        String fileName = "src/test/resources/Evidencias/" + name + System.currentTimeMillis() + ".png";
+        String fileName = "src/test/resources/Evidencias/" + data.today() +"-"+ name + System.currentTimeMillis() + ".png";
         try {
             FileHandler.copy(source, new File(fileName));
             System.out.println("Screenshot capturado e salvo " + fileName);

@@ -34,4 +34,12 @@ public class Date {
         String date = days.format(dateFormat);
         return date;
     }
+
+    public String today(){
+        DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd-MM-yy");
+        LocalDate today = LocalDate.now(); // Data atual
+        String date = today.format(dateFormat);
+        return date;
+    }
+
 }
